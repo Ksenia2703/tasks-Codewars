@@ -777,6 +777,112 @@
 // console.log(bmi(weight, height))
 
 // ----------------------------------------------------------------------------------
+// 31.
+// Ваша задача — создать простую функцию проверки пароля, которую можно 
+// увидеть на многих веб-сайтах. Правила для действительного пароля следующие:
+// Должно быть хотя бы 1 число.
+// Должна быть как минимум 1 заглавная буква.
+// Должна быть хотя бы 1 строчная буква.
+// Пароль должен быть не менее 8 символов.
+// Вам разрешено использовать любые методы для подтверждения пароля.
+
+// let str = "Abcd1235";
+// function password(str) {
+//     let lowercaseCharacters = str.toLowerCase();
+//     let UppercaseCharacters = str.toUpperCase();
+//     if (str === lowercaseCharacters || str === UppercaseCharacters) {
+//         return false
+//     }
+//     for (let i = 0; i < str.length; i++) {
+//         if (str.match(/\d/g) === null || str.length < 8) {
+//             return false
+//         } else {
+//             return true
+//         }
+//     }
+// }
+
+// console.log(password(str))
+
+// -----------------------------------------------------------------------------------
+// 32.
+// Реализуйте функцию makeAcronym, которая возвращает первые буквы каждого 
+// слова в переданной строке. Убедитесь, что возвращаемые буквы в верхнем регистре.
+// Если переданное значение не является строкой, возвращается «Not a string».
+// Если переданное значение представляет собой строку, содержащую символы, отличные 
+// от пробелов и букв алфавита, вернуть «Not letters».
+// Если строка пуста, просто верните саму строку: "".
+// 'Hello codewarrior' -> 'HC'   ||  'a42' -> 'Not letters'     ||     42 -> 'Not a string'
+// [2,12] -> 'Not a string'
+
+// let string = '42';
+// var makeAcronym = function(string){
+//     if (typeof (string) !== 'string') {
+//         return 'Not a string'
+//     }
+//     for(let i = 0; i < string.length; i++) {
+//         if (i === 0 || string[i-1] === ' ') {
+//             str += string[i].toUpperCase();
+//         }
+//     }
+//     for(let i = 0; i < str.length; i++) {
+//         if (string.match(/\d/g) !== null && isNaN(parseInt(str[i]))) {
+//             return 'Not letters'
+//         } else if (string.match(/\d/g) !== null) {
+//             return 'Not letters'
+//         } else if (!isNaN(parseInt(str[i]))  && string.match(/\d/g) !== null) {
+//             return 'Not a string'
+//         }
+//     };
+//     return str
+// }
+
+// console.log(makeAcronym(string))
+
+// --------------------------------------------------------------------------------
+// 33.
+// Получив строку, превратите каждый символ в его код символа ASCII и соедините 
+// их вместе, чтобы создать число — назовем это число total1:
+// Затем замените любое вхождение числа 7на число 1и назовите это число 'total2':
+// Затем верните разницу между суммой цифр в total1и total2:
+
+// let x = 'aaaaaddddr';
+// function calc(x){
+//     let total1 = ''; 
+//     let total2 = '';
+//     let sum1 = 0;
+//     let sum2 = 0;
+//     let result = 0;
+//     for (let i = 0; i < x.length; i++) {
+//         total1 += x[i].charCodeAt();
+//     }
+//     for (let j = 0; j < total1.length; j++) {
+//         if (total1[j] === '7') {
+//             total2 += '1'
+//         } else {
+//             total2 += total1[j];
+//         }
+//     }
+//     for(let l = 0; l < total1.length; l++) {
+//         sum1 += +total1[l]
+//     }
+//     for(let y = 0; y < total2.length; y++) {
+//         sum2 += +total2[y]
+//     }
+//     result = sum1 - sum2
+//     return result
+// }
+
+// console.log(calc(x))
+
+// --------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
