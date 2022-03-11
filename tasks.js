@@ -876,18 +876,150 @@
 // console.log(calc(x))
 
 // --------------------------------------------------------------------------------
+// 34.
+// Учитывая массив целых чисел, удалите наименьшее значение. Не изменяйте исходный 
+// массив/список . Если есть несколько элементов с одинаковым значением, 
+// удалите элемент с более низким индексом. Если вы получили пустой массив/список, 
+// верните пустой массив/список.
 
+// let numbers = [336, 373, 369, 321, 107];
 
+// function removeSmallest(numbers) {
+//     let copyNumbers = numbers.slice();
+//     if (copyNumbers.length === 0) {
+//         return [];
+//     }
+//     let m = Math.min(...copyNumbers);
+//     copyNumbers.splice(copyNumbers.indexOf(m), 1);
+//     return copyNumbers;
+// }
 
+// console.log(removeSmallest(numbers));
 
+// -------------------------------------------------------------------------------
+// 35.
 
+// let a = [1,2,3,4];
+// function doubleEveryOther(a) {
+//     let a1 = [];
+//     for (let i = 0; i < a.length; i++) {
+        
+//         if (i % 2 !== 0) {
+//             a1.push(+a[i] * 2)
+//         } else {
+//             a1.push(a[i])
+//         }
+//     }
+//      return a1;
+// }
 
+// console.log(doubleEveryOther(a));
 
+// ------------------------------------------------------------------------------
+// 36.
+// cравнить каждую пару целых чисел из двух массивов и вернуть новый массив больших чисел.
+// Примечание. Оба массива имеют одинаковые размеры.
 
+// let a = [13, 64, 15, 17, 88];
+// let b = [23, 14, 53, 17, 80];
+// function getLargerNumbers(a, b) {
+//     let result = []
+//     for (let i = 0; i < a.length; i++) {
+//             if (a[i] > b[i]) {
+//                 result.push(a[i]);
+//             } else if (b[i] > a[i]) {
+//                 result.push(b[i]);
+//             } else {
+//                 result.push(b[i]);
+//             }
+//     }
+//     return result;
+// }
 
+// console.log(getLargerNumbers(a, b))
 
+// -------------------------------------------------------------------------------
+// 37.
+// Создайте функцию, которая возвращает сумму двух наименьших положительных чисел 
+// для заданного массива минимум из 4 положительных целых чисел. Не будут переданы 
+// числа с плавающей запятой или неположительные целые числа.
 
+// let numbers = [5, 8, 12, 19, 22];
+// function sumTwoSmallestNumbers(numbers) {  
+//     let res = [];
+//     let result = 0;
+//     res.push(Math.min(...numbers));
+//     numbers.splice(numbers.indexOf(+res), 1);
+//     res.push(Math.min(...numbers));
+//     for (let i = 0; i < res.length; i++) {
+//         result += res[i]
+//     }
+//     return result;
+// }
 
+// console.log(sumTwoSmallestNumbers(numbers))
+
+// -------------------------------------------------------------------------------
+// 38.
+// Вам нужно создать функцию, которая преобразует ввод в этот формат, при этом вывод 
+// будет той же строкой, за исключением шаблона прописных и строчных букв.
+// ("stop Making spongebob Memes!"), 'StOp mAkInG SpOnGeBoB MeMeS!')
+
+// let sentence = 'stop Making spongebob Memes!'
+// function spongeMeme(sentence) {
+//     sentence = sentence.toLowerCase()
+//     let str = '';
+//     for (let i = 0; i < sentence.length; i++) {
+//         if (i % 2 !== 0) {
+//             str += sentence[i].toUpperCase()
+//         } else {
+//             str += sentence[i]
+//         }
+//     }
+//      return str;
+// }
+
+// console.log(spongeMeme(sentence))
+
+// -------------------------------------------------------------------------------
+// 39.
+// Для этого ката вам придется забыть, как складывать два числа.
+// Проще говоря, наш метод не любит принцип переноса чисел и просто записывает каждое вычисляемое число
+// Вы можете предположить, что оба целых числа являются положительными целыми числами.
+    // assert.strictEqual(add(16, 18), 214);
+    // assert.strictEqual(add(26, 39), 515);
+    // assert.strictEqual(add(122, 81), 1103);
+
+// let num1 = 16;
+// let num2 = 18;
+// function add(num1, num2) {
+//     let result = [];
+//     num1 = String(num1);
+//     num2 = String(num2);
+//     let length = 0;
+//     let diff = 0;
+//     let zeroString = '';
+//     if (num1.length > num2.length) {
+//         length = num1.length;
+//         diff = num1.length - num2.length;
+//         zeroString = '0'.repeat(diff);
+//         num2 = zeroString + num2;
+//     } else {
+//         length = num2.length;
+//         diff = num2.length - num1.length;
+//         zeroString = '0'.repeat(diff);
+//         num1 = zeroString + num1;
+//     }
+
+//     for (let i = length - 1; i >= 0; i--) {
+//         result.push(+num2[i] + +num1[i]);
+//     }
+//     return +result.reverse().join('');
+// }
+
+// console.log(add(num1, num2))
+
+// -----------------------------------------------------------------------------
 
 
 
