@@ -1020,13 +1020,74 @@
 // console.log(add(num1, num2))
 
 // -----------------------------------------------------------------------------
+// 40.
+// Напишите функцию, которая удаляет все одиночные числа 9, находящиеся между 7
+
+// let str = '789797';
+// function sevenAte9(str) {
+//     let result = '';
+//     for (let i = 0; i < str.length; i++) {
+//         if (!(str[i - 1] === '7' && str[i + 1] === '7' && i > 0 && str[i] === '9')) {
+//             result += str[i]
+//         }
+//     }
+//     return result
+// }
+
+// console.log(sevenAte9(str))
+
+// -----------------------------------------------------------------------------
+// 41.
+// В этом небольшом задании вам дается строка чисел, разделенных пробелами, 
+// и вы должны вернуть наибольшее и наименьшее число.
+// ("1 2 3 4 5");  // return "5 1"
 
 
+// let numbers = '8 3 -5 42 -1 0 0 -9 4 7 4 -4';
+// function highAndLow(numbers){
+    // первое ршение
+//     numbers = numbers.split(' ')
+//     let maxNum = '';
+//     let minNum = '';
+//     let result = '';
+//     maxNum = Math.max(...numbers);
+//     minNum = Math.min(...numbers);
+//     result = String(maxNum) + ' ' + String(minNum)
+//     return result
 
+// второе решение 
+//     numbers = numbers.split(' ');
+//     return Math.max(...numbers) + ' ' + Math.min(...numbers);
+// }
 
+// console.log(highAndLow(numbers))
 
+// -----------------------------------------------------------------------------
+// 42.
+// Банкоматы позволяют использовать 4- или 6-значные PIN-коды, а PIN-коды не 
+// могут содержать ничего, кроме ровно 4 или ровно 6 цифр.
+// Если функции передана допустимая строка PIN-кода, верните true, иначе верните false.
 
+// let pin = `123
+// `;
+// function validatePIN (pin) {
+//     if(pin.length !== pin.trim().length) {
+//         return false
+//     }
+//     if (pin.length === 4 || pin.length === 6) {
+//         if (pin.includes('.')|| pin.includes('-') || pin.includes('+') || isNaN(+pin)) {
+//             return false
+//         } else {
+//             return true
+//         }
+//     } else {
+//         return false
+//     }
+// }
 
+// console.log(validatePIN (pin))
+
+// ---------------------------------------------------------------------------------
 
 
 
