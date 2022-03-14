@@ -1,15 +1,14 @@
 // 1.
 // переместить все 0 в конец массива не изменяя порядок других элементов
-// let a =[4, 0, 6, -1, 0, 88, 33, 0, 9];
+// let a = [4, 0, 6, -1, 0, 88, 33, 0, 9];
 // let b = [];
 
-// a.forEach((el, i) => {
+// a.forEach ((el, i) => {
 // if (el === 0) {
 //     a.splice(i, 1);
 //     a.push(el);
 // } 
 // })
-
 
 // ------------------------------------------------
 // 2.
@@ -19,14 +18,14 @@
 // let smallVowels = 'аоэеиыуёюя';
 // let arr = str.split('');
 
-// arr.forEach((el, i) => {
+// arr.forEach ((el, i) => {
 //     if (el === el.toLowerCase() && smallVowels.includes(el)) {
 //         arr.splice(i, 1);
 //     }
     
 // });
 // arr = arr.join('');
-// console.log(arr);
+
 
 // ------------------------------------------------
 // 3.
@@ -36,29 +35,25 @@
 // let s = 455;
 // let summa = 0;
 // let array = s.toString().split('');
-// console.log(array);
 // for (let i = 0; i < array.length; i++) {
 //     summa += +array[i];
 // }
 // console.log(summa);
-
 
 // ------------------------------------------------
 // 4.
 // в функцию передаётся массив, функция должна вернуть 
 // сумму всех нечётных чисел больше нуля.
 
-// let m = [5, 0, -5, 20, 88, 17, -32] // 22
-
+// let m = [5, 0, -5, 20, 88, 17, -32]; // 22
 // function dima(m) {
 //     let result = 0;
-    
-//     m.forEach((el) => {
+//     m.forEach ((el) => {
 //         if (el % 2 !== 0 && el > 0) {
-//             result += el
+//             result += el;
 //         }  
 //     })
-//     console.log(result)
+//     return result;
 // } 
 
 // dima(m);
@@ -69,14 +64,12 @@
 
 // let a = 'дай мне свободу';
 
-// function rev(a) {
+// function rev (a) {
 //     let reverse = a.split('').reverse().join('');
-//     return reverse
+//     return reverse;
 // }
-// rev(a);
 
 // console.log(rev(a));
-
 
 // ------------------------------------------------
 // 6.
@@ -137,7 +130,6 @@
 //     return k.slice(0, -1);
 // }
 
-// baksa(b)
 // console.log(bak(b))
 
 // -----------------------------------------
@@ -154,7 +146,6 @@
 //     let element = '';
 //     for (let i = 0; i < a.length; i++) {
 //         element += a[i];
-//         // console.log(element)
 //         if (element.length === 2) {
 //             arr.push(element);
 //             element = '';
@@ -168,7 +159,6 @@
 // }
 // console.log(baksa(a))
 
-
 //----------------------------------------
 // 9.
 // дана строка в ней надо заменить все буквы 'T' на буквы 'U'
@@ -179,7 +169,7 @@
 //     str = str.split('');
 //     for (let i = 0; i < str.length; i++) {
 //         if (str[i] === 'T') {
-//             str[i] = 'U'
+//             str[i] = 'U';
 //         } 
 //     }
 //     return str.join('');
@@ -197,11 +187,11 @@
 //     string = string.split('');
 //     for (let i = 0; i < string.length; i++) {
 //         if (string[i] === '5') {
-//             string[i] = 'S'
+//             string[i] = 'S';
 //         } else if (string[i] === '0') {
-//             string[i] = 'O'
+//             string[i] = 'O';
 //         } else if (string[i] === '1') {
-//             string[i] = 'I'
+//             string[i] = 'I';
 //         }
 //     }
 //     return string.join('');
@@ -227,8 +217,7 @@
 //     }
 //     return x;
 // }
-// console.log(sequence(x, t))
-
+// console.log(sequence(x, t));
 
 // -------------------------------------------------------------
 // 12.
@@ -243,16 +232,16 @@
 //   false, false, true,  true];
   
 // function countSheeps(arrayOfSheep) {
-//     let sheep = 0
+//     let sheep = 0;
 //     for (let i = 0; i < arrayOfSheep.length; i++) {
 //         if (arrayOfSheep[i] === true) {
-//             sheep += 1
+//             sheep += 1;
 //         }
 //     }
 //     return sheep;
 // }
 
-// console.log(countSheeps(arrayOfSheep))
+// console.log(countSheeps(arrayOfSheep));
 
 
 // --------------------------------------------------------------
@@ -264,7 +253,7 @@
 
 // /parse("iiisdoso") => [ 8, 64 ]
 
-// let data = "iiisdoso"
+// let data = "iiisdoso";
 
 // function parse(data){
 //     let res = 0;
@@ -276,17 +265,14 @@
 //             res--;
 //         } else if (data[i] === 's') {
 //             res = Math.pow(res, 2);
-//             //res = res*res;
 //         } else if (data[i] === 'o') {
-//             arr.push(res)
+//             arr.push(res);
 //         }
 //     }
 //     return arr;
 // }
 
-// parse(data)
 // console.log(parse(data))
-
 
 // --------------------------------------------------------------------
 // 14.
@@ -297,18 +283,14 @@
 // function rentalCarCost(d) {
 //     let price = 40;
 //     let result = 0;
-//     for(let i = 0; i <= d; i++) {
-//         if(d < 3) {
+//     for (let i = 0; i <= d; i++) {
+//         if (d < 3) {
 //             result = price * d;
-//             // console.log(result);
-//         } else if(d < 7 && d >= 3) {
+//         } else if (d < 7 && d >= 3) {
 //             result = price * d - 20;
-//             // console.log(result);
 //         } else if (d >= 7) {
 //             result = price * d - 50;
-//             // console.log(result);
 //         }
-//         console.log(result);
 //     }
 //     return result; 
 // }
@@ -323,8 +305,8 @@
 //     var dayCost = 40;
     
 //     var discount = 0;
-//     if(days >= 3) discount += 20;
-//     if(days >= 7) discount += 30;
+//     if (days >= 3) discount += 20;
+//     if (days >= 7) discount += 30;
     
 //     return dayCost * days - discount;
 // }
@@ -341,12 +323,11 @@
 // let x = ['bad', 'bad', 'bad'];
 // function well(x){
 //     let count = 0;
-//     for(let i = 0; i < x.length; i++) {
+//     for (let i = 0; i < x.length; i++) {
 //         if (x[i] === 'good') {
-//             count += 1
+//             count += 1;
 //         }  
 //     }
-//     console.log(count)
 //     if (count === 1 && count > 0) {
 //         return 'Publish!';
 //     } else if(count > 2) {
@@ -366,7 +347,6 @@
 // let nbPetals = 3;
 // function howMuchILoveYou(nbPetals) {
 //     let remainder = nbPetals % 6;
-//     console.log(remainder)
 //     if (remainder === 1) {
 //         return 'I love you';
 //     } else if (remainder === 2){
@@ -413,7 +393,7 @@
 // ----------------------------------------------------------------
 // 17.
 // let a = 'бакса';
-// for(let i = 0; i < a.length; i++){
+// for (let i = 0; i < a.length; i++){
 //     console.log(a[i]);
 // }
 // console.log(a.toUpperCase);
@@ -431,12 +411,12 @@
 // let a = [1, 4, -5, 77, 6, -3, 2];
 // function b(a) {
 //     let c = [];
-//     for(let i = 0; i < a.length; i++) {
-//         if(a[i] % 2 === 0 && a[i] > 0) {
+//     for (let i = 0; i < a.length; i++) {
+//         if (a[i] % 2 === 0 && a[i] > 0) {
 //             c.push(a[i]);
 //         }
 //     }
-//     return c
+//     return c;
 // }
 // let result = b(a);
 // console.log(result);
@@ -452,7 +432,7 @@
 
 // function incrementString (strng) {
 //     let res = '';
-//     if(isNaN(parseInt(strng[strng.length-1]))) {
+//     if (isNaN(parseInt(strng[strng.length-1]))) {
 //         res = strng + 1;
 //     } else {
 //         let numb = '';
@@ -461,12 +441,10 @@
 //         let countAfterConversion = 0;
 //         let resultConversion = 0;
 //         let zeros = '';
-//         for(let i = strng.length - 1; i >= 0; i--){
-//             if(!isNaN(parseInt(strng[i]))){
+//         for (let i = strng.length - 1; i >= 0; i--){
+//             if (!isNaN(parseInt(strng[i]))){
 //                 numb += strng[i];
 //                 countBeforeConversion += 1;
-//                 console.log(numb);
-//                 console.log(countBeforeConversion);
 //             } else {
 //                 str += strng[i];
 //             }
@@ -475,21 +453,13 @@
 //         str = str.split("").reverse().join("");
 //         numb = numb.split("").reverse().join("");
 //         numb = +numb + 1;
-
 //         countAfterConversion = String(+numb).length;
-//         console.log('countAfterConversion = ', countAfterConversion);
-
 //         if (countAfterConversion < countBeforeConversion) {
 //             resultConversion = countBeforeConversion - countAfterConversion;
-//             console.log(resultConversion)
 //             zeros = '0'.repeat(resultConversion); 
-//             console.log('zeros = ', zeros);
 //         }
-
 //         res = str.concat(zeros).concat(numb);
 //         str = str.concat(numb);
-//         console.log(numb);
-//         console.log(str);
 //     }
 //     return res;
 // }
@@ -503,13 +473,13 @@
 // let str = 'The quick brown.';
 // function reverseWords(str) {
 //     let reverse = [];
-//     str = str.split(' ')
-//     for(let i = 0; i < str.length; i++) {
+//     str = str.split(' ');
+//     for (let i = 0; i < str.length; i++) {
 //         reverse.push(str[i].split('').reverse().join(''));
 //     }
 //     return reverse.join(' ');
 // }
-// console.log(reverseWords(str))
+// console.log(reverseWords(str));
 
 
 //-----------------------------------------------------------------------------------
@@ -520,16 +490,16 @@
 // let n = '1101';
 // function onesComplement(n) {
 //     str = '';
-//     for(let i = 0; i < n.length; i++) {
-//         if(n[i] === '1') {
-//             str += 0
+//     for (let i = 0; i < n.length; i++) {
+//         if (n[i] === '1') {
+//             str += 0;
 //         } else {
-//             str += 1
+//             str += 1;
 //         }
 //     }
-//     return str
+//     return str;
 // };
-// console.log(onesComplement(n))
+// console.log(onesComplement(n));
 
 // ----------------------------------------------------------------------------------
 // 22.
@@ -539,14 +509,14 @@
 // let input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // function sumEvenNumbers(input) {
 //     let res = 0;
-//     for(let i = 0; i < input.length; i++) {
-//         if(input[i] % 2 === 0) {
-//             res += input[i]
+//     for (let i = 0; i < input.length; i++) {
+//         if (input[i] % 2 === 0) {
+//             res += input[i];
 //         }
 //     }
-//     return res
+//     return res;
 // }
-// console.log(sumEvenNumbers(input))
+// console.log(sumEvenNumbers(input));
 
 // -----------------------------------------------------------------------------------
 // 23.
@@ -557,21 +527,21 @@
 // let end = 15;
 // function dontGiveMeFive(start, end) {
 //     let list = [];
-//     for(let i = start; i <= end; i++) {
+//     for (let i = start; i <= end; i++) {
 //         let str = String(i);
 //         1 вариант решения
-//         if(str[0] !== String(5) && str[str.length - 1] !== String(5)) {
-//             list.push(i)
+//         if (str[0] !== String(5) && str[str.length - 1] !== String(5)) {
+//             list.push(i);
 //         }  
 
 //         2 вариант решения
-//         if(!str.includes('5')) {
-//             list.push(i)
+//         if (!str.includes('5')) {
+//             list.push(i);
 //         } 
 //     }
 //   return list.length;
 // }
-// console.log(dontGiveMeFive(start, end))
+// console.log(dontGiveMeFive(start, end));
 
 
 // ----------------------------------------------------------------------------
@@ -588,8 +558,8 @@
 //     let line = [];
 //     let num = [];
 //     let res = '';
-//     for(let i = 0; i < arrayOfChars.length; i++) {
-//         if(isNaN(+arrayOfChars[i])) {
+//     for (let i = 0; i < arrayOfChars.length; i++) {
+//         if (isNaN(+arrayOfChars[i])) {
 //             line.push(arrayOfChars[i]);
 //         } else {
 //             num.push(arrayOfChars[i]);
@@ -598,9 +568,9 @@
 //     line = line.sort().join('');
 //     num = num.sort().join('');
 //     res = line + num;
-//     return res
+//     return res;
 // }
-// console.log(unusualSort(arrayOfChars))
+// console.log(unusualSort(arrayOfChars));
 
 
 // ДОРЕШАТЬ чтобы правильно сортировались [1, 2, 3, '1', '2', '3'] => [1, '1', 2, '2', 3, '3']!!!!!
@@ -620,15 +590,15 @@
 //     let arrCopy = array.slice();
 //     let arrSort = arrCopy.sort((a, b) => a - b).join(', ');
 //     let arrSortReverse = arrCopy.reverse().join(', ');
-//     if(array.join(', ') === arrSort) {
-//         return 'yes, ascending'
+//     if (array.join(', ') === arrSort) {
+//         return 'yes, ascending';
 //     } else if (array.join(', ') === arrSortReverse) {
-//         return 'yes, descending'
+//         return 'yes, descending';
 //     } else {
-//         return 'no'
+//         return 'no';
 //     }
 // }
-// console.log(isSortedAndHow(array))
+// console.log(isSortedAndHow(array));
 
 
 
@@ -644,22 +614,21 @@
 //     let second = 0;
 //     let uniqueValues = new Set(numbers);
 //     uniqueValues = Array.from(uniqueValues);
-//     for(let i = 0; i < numbers.length; i++) {
-//         if(numbers[i] === uniqueValues[0]){
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] === uniqueValues[0]){
 //             first += 1;
 //         } else {
 //             second += 1;
 //         }
 //     }
-//     if(first > second) {
-//         return uniqueValues[1]
+//     if (first > second) {
+//         return uniqueValues[1];
 //     } else {
-//         return uniqueValues[0]
+//         return uniqueValues[0];
 //     }
-
 // }
 
-// console.log(stray(numbers))
+// console.log(stray(numbers));
 
 // ------------------------------------------------------------------------------
 // 27.
@@ -673,21 +642,20 @@
 //     let newStr = '';
 //     let result = '';
 //     let letter = 'abcdefghijklmnopqrstuvwxyz';
-//     for(let i = 0; i < str.length; i++) {
-//         if((str[i] === l || str[i] === l.toUpperCase() || str[i] === l.toLowerCase()) && (i + 1) <= (str.length - 1)) {
+//     for (let i = 0; i < str.length; i++) {
+//         if ((str[i] === l || str[i] === l.toUpperCase() || str[i] === l.toLowerCase()) && (i + 1) <= (str.length - 1)) {
 //             newStr += str[i + 1];
 //         }
 //     }
-//     for(let j = 0; j < newStr.length; j++) {
-//         if(letter.includes(newStr[j]) || letter.toUpperCase().includes(newStr[j])) {
+//     for (let j = 0; j < newStr.length; j++) {
+//         if (letter.includes(newStr[j]) || letter.toUpperCase().includes(newStr[j])) {
 //             result += newStr[j];
 //         }
 //     }
-//     return result
+//     return result;
 // }
 
-// console.log(comes_after(str,l))
-
+// console.log(comes_after(str,l));
 
 // ----------------------------------------------------------------------------
 // 28.
@@ -695,18 +663,16 @@
 // передает пустой массив или значение null/nil, она должна вернуть пустой массив.
 
 // let nums = [1,2,3,10,5];
-// function solution(nums){
-    
-//     if(nums === null || nums === []) {
-//         return []
+// function solution(nums){  
+//     if (nums === null || nums === []) {
+//         return [];
 //     } else {
-//         nums.sort((a, b) => a - b)
+//         nums.sort((a, b) => a - b);
 //     }
 //     return nums;
 // }
 
-// console.log(solution(nums))
-
+// console.log(solution(nums));
 
 // ---------------------------------------------------------------------------
 // 29.
@@ -725,21 +691,20 @@
 //     let finalPassword = [];
 //     pass = phrase.map(a => a[0]);
 //     for(let i = 0; i < pass.length; i++) {
-//         if(pass[i] === 'i' || pass[i] === 'I') {
-//             finalPassword.push('1')
-//         } else if(pass[i] === 'o' || pass[i] === 'O') {
-//             finalPassword.push('0')
-//         } else if(pass[i] === 's' || pass[i] === 'S') {
-//             finalPassword.push('5')
+//         if (pass[i] === 'i' || pass[i] === 'I') {
+//             finalPassword.push('1');
+//         } else if (pass[i] === 'o' || pass[i] === 'O') {
+//             finalPassword.push('0');
+//         } else if (pass[i] === 's' || pass[i] === 'S') {
+//             finalPassword.push('5');
 //         } else {
-//             finalPassword.push(pass[i])
+//             finalPassword.push(pass[i]);
 //         }
 //     }
-//     console.log(finalPassword)
-//     return finalPassword.join('')
+//     return finalPassword.join('');
 // }
 
-// console.log(makePassword(phrase))
+// console.log(makePassword(phrase));
 
 // --------------------------------------------------------------------------
 // 30.
@@ -754,15 +719,14 @@
 // function bmi(weight, height) {
     // let IMT = 0;
     // IMT = weight/(height * height)
-    // console.log(IMT)
-    // if(IMT <= 18.5) {
+    // if (IMT <= 18.5) {
     //     return 'Underweight';
-    // } else if(IMT <= 25.0) {
-    //     return 'Normal'
-    // } else if(IMT <= 30.0) {
-    //     return 'Overweight'
+    // } else if (IMT <= 25.0) {
+    //     return 'Normal';
+    // } else if (IMT <= 30.0) {
+    //     return 'Overweight';
     // } else {
-    //     return 'Obese'
+    //     return 'Obese';
     // }
 
     // или
@@ -771,10 +735,10 @@
 //     (IMT <= 25.0) ? 'Нормальный' :
 //     (IMT <= 30.0) ? 'Избыточный вес' :
 //     'Ожирение' ;
-//   return res
+//   return res;
 // }
 
-// console.log(bmi(weight, height))
+// console.log(bmi(weight, height));
 
 // ----------------------------------------------------------------------------------
 // 31.
@@ -791,18 +755,18 @@
 //     let lowercaseCharacters = str.toLowerCase();
 //     let UppercaseCharacters = str.toUpperCase();
 //     if (str === lowercaseCharacters || str === UppercaseCharacters) {
-//         return false
+//         return false;
 //     }
 //     for (let i = 0; i < str.length; i++) {
 //         if (str.match(/\d/g) === null || str.length < 8) {
-//             return false
+//             return false;
 //         } else {
-//             return true
+//             return true;
 //         }
 //     }
 // }
 
-// console.log(password(str))
+// console.log(password(str));
 
 // -----------------------------------------------------------------------------------
 // 32.
@@ -818,26 +782,26 @@
 // let string = '42';
 // var makeAcronym = function(string){
 //     if (typeof (string) !== 'string') {
-//         return 'Not a string'
+//         return 'Not a string';
 //     }
-//     for(let i = 0; i < string.length; i++) {
+//     for (let i = 0; i < string.length; i++) {
 //         if (i === 0 || string[i-1] === ' ') {
 //             str += string[i].toUpperCase();
 //         }
 //     }
-//     for(let i = 0; i < str.length; i++) {
+//     for (let i = 0; i < str.length; i++) {
 //         if (string.match(/\d/g) !== null && isNaN(parseInt(str[i]))) {
-//             return 'Not letters'
+//             return 'Not letters';
 //         } else if (string.match(/\d/g) !== null) {
-//             return 'Not letters'
+//             return 'Not letters';
 //         } else if (!isNaN(parseInt(str[i]))  && string.match(/\d/g) !== null) {
-//             return 'Not a string'
+//             return 'Not a string';
 //         }
 //     };
-//     return str
+//     return str;
 // }
 
-// console.log(makeAcronym(string))
+// console.log(makeAcronym(string));
 
 // --------------------------------------------------------------------------------
 // 33.
@@ -863,17 +827,17 @@
 //             total2 += total1[j];
 //         }
 //     }
-//     for(let l = 0; l < total1.length; l++) {
-//         sum1 += +total1[l]
+//     for (let l = 0; l < total1.length; l++) {
+//         sum1 += +total1[l];
 //     }
-//     for(let y = 0; y < total2.length; y++) {
-//         sum2 += +total2[y]
+//     for (let y = 0; y < total2.length; y++) {
+//         sum2 += +total2[y];
 //     }
-//     result = sum1 - sum2
-//     return result
+//     result = sum1 - sum2;
+//     return result;
 // }
 
-// console.log(calc(x))
+// console.log(calc(x));
 
 // --------------------------------------------------------------------------------
 // 34.
@@ -903,11 +867,10 @@
 // function doubleEveryOther(a) {
 //     let a1 = [];
 //     for (let i = 0; i < a.length; i++) {
-        
 //         if (i % 2 !== 0) {
-//             a1.push(+a[i] * 2)
+//             a1.push(+a[i] * 2);
 //         } else {
-//             a1.push(a[i])
+//             a1.push(a[i]);
 //         }
 //     }
 //      return a1;
@@ -923,7 +886,7 @@
 // let a = [13, 64, 15, 17, 88];
 // let b = [23, 14, 53, 17, 80];
 // function getLargerNumbers(a, b) {
-//     let result = []
+//     let result = [];
 //     for (let i = 0; i < a.length; i++) {
 //             if (a[i] > b[i]) {
 //                 result.push(a[i]);
@@ -936,7 +899,7 @@
 //     return result;
 // }
 
-// console.log(getLargerNumbers(a, b))
+// console.log(getLargerNumbers(a, b));
 
 // -------------------------------------------------------------------------------
 // 37.
@@ -952,12 +915,12 @@
 //     numbers.splice(numbers.indexOf(+res), 1);
 //     res.push(Math.min(...numbers));
 //     for (let i = 0; i < res.length; i++) {
-//         result += res[i]
+//         result += res[i];
 //     }
 //     return result;
 // }
 
-// console.log(sumTwoSmallestNumbers(numbers))
+// console.log(sumTwoSmallestNumbers(numbers));
 
 // -------------------------------------------------------------------------------
 // 38.
@@ -965,21 +928,21 @@
 // будет той же строкой, за исключением шаблона прописных и строчных букв.
 // ("stop Making spongebob Memes!"), 'StOp mAkInG SpOnGeBoB MeMeS!')
 
-// let sentence = 'stop Making spongebob Memes!'
+// let sentence = 'stop Making spongebob Memes!';
 // function spongeMeme(sentence) {
-//     sentence = sentence.toLowerCase()
+//     sentence = sentence.toLowerCase();
 //     let str = '';
 //     for (let i = 0; i < sentence.length; i++) {
 //         if (i % 2 !== 0) {
-//             str += sentence[i].toUpperCase()
+//             str += sentence[i].toUpperCase();
 //         } else {
-//             str += sentence[i]
+//             str += sentence[i];
 //         }
 //     }
 //      return str;
 // }
 
-// console.log(spongeMeme(sentence))
+// console.log(spongeMeme(sentence));
 
 // -------------------------------------------------------------------------------
 // 39.
@@ -1017,7 +980,7 @@
 //     return +result.reverse().join('');
 // }
 
-// console.log(add(num1, num2))
+// console.log(add(num1, num2));
 
 // -----------------------------------------------------------------------------
 // 40.
@@ -1028,13 +991,13 @@
 //     let result = '';
 //     for (let i = 0; i < str.length; i++) {
 //         if (!(str[i - 1] === '7' && str[i + 1] === '7' && i > 0 && str[i] === '9')) {
-//             result += str[i]
+//             result += str[i];
 //         }
 //     }
-//     return result
+//     return result;
 // }
 
-// console.log(sevenAte9(str))
+// console.log(sevenAte9(str));
 
 // -----------------------------------------------------------------------------
 // 41.
@@ -1052,15 +1015,15 @@
 //     let result = '';
 //     maxNum = Math.max(...numbers);
 //     minNum = Math.min(...numbers);
-//     result = String(maxNum) + ' ' + String(minNum)
-//     return result
+//     result = String(maxNum) + ' ' + String(minNum);
+//     return result;
 
 // второе решение 
 //     numbers = numbers.split(' ');
 //     return Math.max(...numbers) + ' ' + Math.min(...numbers);
 // }
 
-// console.log(highAndLow(numbers))
+// console.log(highAndLow(numbers));
 
 // -----------------------------------------------------------------------------
 // 42.
@@ -1072,22 +1035,156 @@
 // `;
 // function validatePIN (pin) {
 //     if(pin.length !== pin.trim().length) {
-//         return false
+//         return false;
 //     }
 //     if (pin.length === 4 || pin.length === 6) {
 //         if (pin.includes('.')|| pin.includes('-') || pin.includes('+') || isNaN(+pin)) {
-//             return false
+//             return false;
 //         } else {
-//             return true
+//             return true;
 //         }
 //     } else {
-//         return false
+//         return false;
 //     }
 // }
 
-// console.log(validatePIN (pin))
+// console.log(validatePIN (pin));
 
 // ---------------------------------------------------------------------------------
+// 43.
+// Напишите функцию, которая находит сумму всех своих аргументов.
+
+// function sum() {
+//     let result = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         result += arguments[i];
+//     }
+//   return result;
+// }
+
+// console.log(sum(12, 1, 1, 1, 1));
+
+// ---------------------------------------------------------------------------------
+// 44.
+// вам будет дана строка, которая может содержать смешанные прописные и строчные 
+// буквы, и ваша задача состоит в том, чтобы преобразовать эту строку либо 
+// только в строчные, либо только в прописные буквы на основе:
+// - внести как можно меньше изменений.
+// - если строка содержит одинаковое количество прописных и строчных букв, 
+// преобразовать строку в нижний регистр.
+
+// let s = 'COde';
+// function solve(s) {
+//     let upper = s.match(/[A-Z]/g);
+//     let lower = s.match(/[a-z]/g);
+//     if ((upper !== null && lower !== null && upper.length > lower.length) || lower === null) {
+//         return s.toUpperCase();
+//     } else {
+//         return s.toLowerCase();
+//     }
+// }
+
+// console.log(solve(s));
+
+// --------------------------------------------------------------------------------
+// 45.
+// проверить делится ли без остатка суммацифр числа на 3, если делится 
+// то вернуть true если нет то false
+
+// let str = '19254';
+// function divisibleByThree(str) {
+//     let sum = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         sum += +str[i];
+//     }
+//     if (sum % 3 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(divisibleByThree(str));
+
+// ----------------------------------------------------------------------------------
+// 46.
+// вернуть массив состоящий из минимального и максимального значения 
+// передаваться будут только положительные числа и числа без плавающей запятой
+
+// let arr = [3464, 21, 5, 7];
+// function minMax(arr) {
+//     let min = [];
+//     let max = [];
+//     let result = [];
+//     min = Math.min(...arr);
+//     result.push(min);
+//     max = Math.max(...arr);
+//     result.push(max);
+//     return result; 
+// }
+
+// console.log(minMax(arr));
+
+// ---------------------------------------------------------------------------------
+// 47.
+// найдите все вхождения n в данном массиве и верните другой массив, содержащий 
+// все позиции индекса n в данном массиве.
+// Если n нет в данном массиве, вернуть пустой массив [].
+// Предположим, что n и все значения в данном массиве всегда будут целыми числами.
+
+// let array = [6, 9, 3, 4, 3, 82, 11];
+// let n = 3;
+// const findAll = (array, n) => {
+//     let ind = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === n) {
+//             ind.push(i)
+//         }
+//     }
+//     return ind;
+// }
+
+// console.log(findAll(array, n));
+
+// -------------------------------------------------------------------------------
+// 48.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
