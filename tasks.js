@@ -862,6 +862,7 @@
 
 // -------------------------------------------------------------------------------
 // 35.
+// Напишите функцию, которая удваивает каждое второе целое число в списке.
 
 // let a = [1,2,3,4];
 // function doubleEveryOther(a) {
@@ -1148,13 +1149,263 @@
 
 // -------------------------------------------------------------------------------
 // 48.
+// Напишите функцию, которая принимает строку и возвращает массив, содержащий 
+// двоичные числа, эквивалентные ASCII-кодам символов строки. Двоичные строки 
+// должны состоять из восьми цифр.
+// Пример: 'man'должен вернуться[ '01101101', '01100001', '01101110' ]
 
+// let str = 'man';
+// function wordToBin(str) {
+//     let intermediateResult = [];
+//     let res = [];
+//     let result = [];
+//     for (let i = 0; i < str.length; i++) {
+//         intermediateResult.push(str[i].charCodeAt())
+//     }
+//     for (let j = 0; j < intermediateResult.length; j++) {
+//         res.push((intermediateResult[j]).toString(2));
+//     }
+//     for (let l = 0; l < res. length; l++) {
+//         result.push('0' + res[l])
+//     }
+//   return result;
+// }
 
+// console.log(wordToBin(str))
 
+// ------------------------------------------------------------------------------
+// 49.
+// Напишите функцию, которая принимает последовательность уникальных целых 
+// чисел от 0 до 9 (включительно) и возвращает недостающий элемент.
 
+// let superImportantArray = [0,5,1,3,9,7,6,4];
+// function getMissingElement(superImportantArray) {
+//     let res = (!superImportantArray.includes(0)) ? 0 :
+//     (!superImportantArray.includes(1)) ? 1 :
+//     (!superImportantArray.includes(2)) ? 2 :
+//     (!superImportantArray.includes(3)) ? 3 :
+//     (!superImportantArray.includes(4)) ? 4 :
+//     (!superImportantArray.includes(5)) ? 5 :
+//     (!superImportantArray.includes(6)) ? 6 :
+//     (!superImportantArray.includes(7)) ? 7 :
+//     (!superImportantArray.includes(8)) ? 8 :
+//     9 ;
+//     return res
+// }
 
+// console.log(getMissingElement(superImportantArray))
 
+// -----------------------------------------------------------------------------
+// 50.
+// Используйте сверхсекретные символы в superSecretCharsпеременной, чтобы 
+// заменить соответствующие символы в вашем совершенно небезопасном пароле 
+// и сделать его неподдающимся взлому.
+// var superSecretChars = [['a', '@'],['s', '$'],['o', '0'], ['h', '5'], ['x', '*']];
+// createSSP("haxorpassword"), "5@*0rp@$$w0rd"
 
+// let password = 'haxorpassword';
+// function createSSP(password) {
+//     let result = '';
+//     for (let i = 0; i < password.length; i++) {
+//         if (password[i] === 'a' || password[i] === 'A') {
+//             result += '@';
+//         } else if (password[i] === 's' || password[i] === 'S') {
+//             result += '$';
+//         } else if (password[i] === 'o' || password[i] === 'O') {
+//             result += '0';
+//         } else if (password[i] === 'h'  || password[i] === 'H') {
+//             result += '5';
+//         }else if (password[i] === 'x' || password[i] === 'X') {
+//             result += '*';
+//         } else {
+//             result += password[i];
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(createSSP(password));
+
+// ----------------------------------------------------------------------------
+// 51.
+// Учитывая исходную строку s, поменяйте регистр минимально возможного 
+// количества букв, чтобы вся строка была написана в верхнем или нижнем регистре.
+
+// let s = 'Aba';
+// function caseUnification(s) {
+//     let upper = s.match(/[A-Z]/g);
+//     let lower = s.match(/[a-z]/g);
+//     if ((upper !== null && lower !== null && upper.length > lower.length) || lower === null) {
+//         return s.toUpperCase();
+//     } else {
+//         return s.toLowerCase();
+//     }
+// }
+
+// console.log(caseUnification(s))
+
+// ----------------------------------------------------------------------------
+// 52.
+// Дан массив с нулевым индексом, arrсостоящий из n целых чисел. Доминатор 
+// массива arr — это значение, встречающееся более чем в половине элементов массива arr.
+// Например, рассмотрим массив arr, в котором arr = [3,4,3,2,3,1,3,3]
+// Доминатор arrравен 3, потому что он встречается в 5 из 8 элементов, arrа 5 
+// больше половины 8.
+// Напишите функцию dominator(arr), которая по массиву с нулевым индексом, 
+// arrсостоящему из n целых чисел, возвращает доминант над arr. Функция должна 
+// возвращать -1, если массив не имеет доминатора. Все значения arrбудут >=0.
+
+// let arr2 = [3,4,2,3,1,3,1,1,1];
+// function dominator(arr2) {
+//     let arr = [];
+//     let uniqueValues = new Set(arr2);
+//     uniqueValues = Array.from(uniqueValues);//[1,2,3,4]
+//     for (let i = 0; i < uniqueValues.length; i++) { 
+//         let currentNumber = uniqueValues[i];
+//         let count = 0;
+//         count = (str.split(currentNumber)).length - 1;
+//         arr.push({
+//             'number':currentNumber,
+//             'count':count
+//         });
+//     }
+//     arr.sort(function(a, b) {
+//         return b.count - a.count;
+//     });
+//     if (arr[0]['count'] > arr2.length/2 && arr[0]['count'] !== arr[1]['count']) {
+//         return arr[0]['number'];
+//     } 
+//     return -1;
+// }
+
+// console.log(dominator(arr2));
+
+// -----------------------------------------------------------------------------
+// 53.
+// Учитывая строку цифр, подтвердите, больше ли сумма всех отдельных четных 
+// цифр суммы всех отдельных нечетных цифр. Всегда будет дана строка чисел.
+// Если сумма четных чисел больше, чем возврат нечетных чисел:"Even is greater than Odd"
+// Если сумма нечетных чисел больше суммы четных чисел, возврат:"Odd is greater than Even"
+// Если сумма четных и нечетных чисел одинакова, возврат:"Even and Odd are the same"
+
+// let str = '123';
+// function evenOrOdd(str) {
+//     let even = 0;
+//     let odd = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] % 2 === 0) {
+//             even += +str[i];
+//         } else {
+//             odd += +str[i];
+//         }
+//     }
+//     if (even > odd) {
+//         return "Even is greater than Odd";
+//     } else if (odd > even) {
+//         return "Odd is greater than Even";
+//     } else {
+//         return "Even and Odd are the same";
+//     }
+// }
+
+// console.log(evenOrOdd(str));
+
+// ---------------------------------------------------------------------------
+// 54.
+// Предположим, нам нужны «чистые» строки. Чистота означает, что строка должна 
+// содержать только буквы a-zи A-Zпробелы. Мы предполагаем, что нет двойных 
+// пробелов или разрывов строк.
+// Напишите функцию, которая принимает строку и возвращает строку без лишних символов.
+
+// let s = '.tree1';
+// function removeChars(s) {
+//     return s.replace(/[^a-zа-яё\s]/gi, '');
+// }
+
+// console.log(removeChars(s));
+
+// --------------------------------------------------------------------------
+// 55.
+
+//TODO
+// let word = 'YAmS';
+// function comfortableWord(word) {
+//     // if (word.length % 2 !== 0) {
+//     //     return false
+//     // }
+//     word = word.toLowerCase();
+//     let left = ['q', 'w', 'e', 'r', 't', 'a', 's', 'd', 'f', 'g', 'z', 'x', 'c', 'v', 'b'];
+//     let right = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm'];
+//     for (let i = 0; i < word.length; i++) {
+//         if (i + 1 > word.length && !left.includes(word[i]) && !left.includes(word[i + 1])) {
+//             return true;
+//         } else if (i + 1 > word.length && !right.includes(word[i]) && !right.includes(word[i + 1])) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+// }
+
+// console.log(comfortableWord(word))
+
+// .includes(1)
+// ------------------------------------------------------------------------
+// 56.
+// Учитывая строку, вернуть копию строки с заменой регистра гласных.
+// Для этой ката предположим, что гласные находятся в наборе "aeouiAEOUI".
+// Пример: Учитывая строку "C is alive!", ваша функция должна возвращать"C Is AlIvE!"
+// Приложение: Ваше решение требуется только для работы с набором символов ASCII.
+// Пожалуйста, убедитесь, что вы меняете местами только гласные.
+
+// let str = 'gsfnlYPgLwrOBBKAzSagTzW';
+// function swapVowelCase(str) {
+//     let vowels = 'aeiou';
+//     let vowels2 = 'AEIOU';
+//     let result = '';
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels.includes(str[i])) {
+//             result += str[i].toUpperCase();
+//         } else if (vowels2.includes(str[i])) {
+//             result += str[i].toLowerCase();
+//         } else {
+//             result += str[i]
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(swapVowelCase(str));
+
+// -----------------------------------------------------------------------
+// 57.
+// Вам будут предоставлены две строки ASCII aи b. Ваша задача — написать 
+// функцию, определяющую, какая из этих строк «стоит» больше, и вернуть ее.
+// Ценность строки определяется суммой индексов ее кодовых точек ASCII. 
+// Так, например, строка HELLOимеет значение 372: H — кодовая точка 72, 
+// E — 69, L — 76, а O — 79. Сумма этих значений равна 372.
+
+// let a = 'DCBA';
+// let b = 'ABCD';
+// function highestValue(a, b) {
+//     let resA = 0;
+//     let resB = 0;
+//     for (let i = 0; i < a.length; i++) {
+//         resA += a[i].charCodeAt();
+//     }
+//     for (let i = 0; i < b.length; i++) {
+//         resB += b[i].charCodeAt();
+//     }
+//     if (resA >= resB) {
+//         return a;
+//     } else {
+//         return b;
+//     }
+// }
+
+// console.log(highestValue(a, b));
+
+// ----------------------------------------------------------------------
 
 
 
