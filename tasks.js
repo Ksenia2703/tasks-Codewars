@@ -1406,25 +1406,253 @@
 // console.log(highestValue(a, b));
 
 // ----------------------------------------------------------------------
+// 58.
+//   Функция отладкиgetSumOfDigits , которая принимает положительное целое 
+//   число для вычисления суммы его цифр. Предположим, что аргумент 
+//   является целым числом.
 
+// let integer = 123;
+// function getSumOfDigits(integer) {
+//     integer = String(integer);
+//     let res = 0;
+//     for (let i = 0; i < integer.length; i++) {
+//         res += +integer[i];
+//     }
+//   return res;
+// }
 
+// console.log(getSumOfDigits(integer));
 
+// ---------------------------------------------------------------------
+// 59.
+// Вам предоставляется словарь/хэш/объект, содержащий несколько языков 
+// и результаты вашего теста на данных языках. Верните список языков, 
+// на которых ваш результат теста не ниже 60, в порядке убывания результатов.
+// Примечание: баллы всегда будут уникальными (поэтому не будет повторяющихся значений).
 
+// let results = {
+//     "Java": 10, 
+//     "Ruby": 80, 
+//     "Python": 65
+// };
+// function myLanguages(results) {
+//     let res = [];
+//     let sortedKeys = [];
 
+//     for (let j in results) {
+//     res.push([j, results[j]]);
+//     }
 
+//     res.sort(function(a, b) {
+//         return b[1] - a[1];
+//     });
 
+//     for (let i = 0; i < res.length; i++) {
+//         if (res[i][1] >= 60) {
+//             sortedKeys.push(res[i][0]);
+//         } 
+//     }
+//     return sortedKeys;
+// }
 
+// console.log(myLanguages(results));
 
+// --------------------------------------------------------------------
+// 60.
+// Вам будет предоставлена ​​строка с наборами символов (то есть слов), 
+// разделенных от одного до трех пробелов (включительно).
+// Глядя на первую букву каждого слова (без учета регистра "A"и с "a"
+// ней следует обращаться одинаково), вам нужно определить, попадает 
+// ли она в положительную/первую половину алфавита ( "a"- "m") или 
+// отрицательную/вторую половину ( "n"- "z").
+// Возврат True/true, если положительных слов больше (или равно), 
+// чем отрицательных, в False/falseпротивном случае.
 
+// let str = "Is  this the  best  Kata?";
+// function connotation(str) {
+//     let firstHalf = 'abcdefghijklmABCDEFGHIJKLM';
+//     let upperFirstHalf = 'ABCDEFGHIJKLM';
+//     let countFirstHalf = 0;
+//     let countSecondHalf = 0;
+//     let firstLetters = '';
+//     for (let i = 0; i < str.length; i++) {
+//         if (i === 0  || str[i - 1] === ' ') {
+//             firstLetters += str[i];
+//         }
+//     }
+//     for (let j = 0; j < firstLetters.length; j++) {
+//         if (firstLetters[j] !== ' ' && firstHalf.includes(firstLetters[j])) {
+//             countFirstHalf++;
+//         } else if (firstLetters[j] !== ' ') {
+//             countSecondHalf++
+//         }
+//     }
+//     if (countFirstHalf >= countSecondHalf) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
+// console.log(connotation(str));
 
+// ---------------------------------------------------------------------
+// 61.
+// Напишите функцию, которая заменяет 'two', 'too' и 'to' на число «2». 
+// Даже если звук встречается в середине слова (как в осьминоге) или 
+// не в нижнем регистре, бабушка все равно считает, что его нужно заменить на 2
 
+// let s = 'I love to text';
+// function textin(s) {
+//     let str = '';
+//     str = s.replace(/two/gi, '2');
+//     str = str.replace(/too/gi, '2');
+//     str = str.replace(/to/gi, '2');
+//     return str;
+// }
 
+// console.log(textin(s));
 
+// --------------------------------------------------------------------
+// 62.
+//TODO дорешать!
+// Ваша задача — создать функцию, которая принимает значение слова и 
+// возвращает его с буквой «i» в начале слова. Например, мы получаем 
+// слово «Телефон», поэтому мы должны вернуть «iPhone». Но у нас 
+// есть несколько правил:
+    // Слово не должно начинаться с буквы «Я», например Inspire .
+    // Количество гласных не должно быть больше или равно количеству 
+    // согласных, например Восток или Мир . («у» считается согласной)
+    // Первая буква не должна быть строчной, например, road .
+// Если слово не соответствует правилам, возвращаем «Недопустимое слово».
 
+// let word = 'East East';
+// function i(word) {
+//     let letter = 'i';
+//     let vowels = 'aeiou';
+//     let consonants = 'bcdfghjklmnpqrstvwxyz';
+//     let vowelsInWord = 0;
+//     let consonantsInWord = 0;
+//     for (let i = 0; i < word.length; i++)  {
+//         if (word[i][0] === 'i' || word[i][0] === 'I') {
+//             console.log(1)
+//             return 'Invalid word';
+//         } else if (word.charAt(0) === word.charAt(0).toLowerCase()) {
+//             console.log(word.charAt(0))
+//             return 'Invalid word';
+//         } else if (vowels.includes(word[i])) {
+//             vowelsInWord ++;
+//         } else {
+//             consonantsInWord ++;
+//         }
+//     }
+//     if (vowelsInWord >= consonantsInWord) {
+//         return 'Invalid word';
+//     } else {
+//         letter += word;
+//     }
+//     console.log(vowelsInWord)
+//     console.log(consonantsInWord)
 
+//     return letter;
+// }
 
+// console.log(i(word));
 
+// ------------------------------------------------------------------
+// 63.
+// Завершите решение, чтобы оно возвращало отформатированную строку. 
+// Возвращаемое значение должно быть равно «Значение равно ЗНАЧЕНИЕ», 
+// где значение — это 5-значное дополненное число.
+// solution(1204),"Value is 01204"
+// solution(109),"Value is 00109"
+
+// let value = 109;
+// function solution(value) {
+//     let str = 'Value is ';
+//     let result = '';
+//     let zero = '0'.repeat(5 - String(value).length);
+//     result = str + zero + String(value);
+//     return result;
+// }
+
+// console.log(solution(value));
+
+// ------------------------------------------------------------------
+// 64.
+// Местный родильный дом интересуется именами!
+// У них есть массивы всех имен детей, которые они видят каждый 
+// год, но списки ооочень длинные! Они не знают, как подсчитать, 
+// сколько раз используется одно имя.
+// Учитывая массив имен и определенную строку имени, вернуть 
+// количество раз, которое конкретное имя появляется в массиве.
+
+// let anArr = ['Bob','Ted','Amy','Alice','Bob','Ted','Amy','Ted','Amy','Fred'];
+// let name = 'Ted';
+// function countName(anArr, name) {
+//     let countCoincidences = 0;
+//     for (let i = 0; i < anArr.length; i++) {
+//         if (anArr[i] === name) {
+//             countCoincidences += 1;
+//         }
+//     }
+//     return countCoincidences;
+// };
+
+// console.log(countName(anArr, name));
+
+// ----------------------------------------------------------------
+// 65.
+// Вернуть массив из слов длинна которых больше n
+
+// let sentence = 'The quick brown fox jumps over the lazy dog';
+// let n = 4;
+// function filterLongWords(sentence, n) {
+//     let result = [];
+//     sentence = sentence.split(' ');
+//     for (let i = 0; i < sentence.length; i++) {
+//         if (sentence[i].length > 4) {
+//             result.push(sentence[i]);
+//         }
+//     }
+//     return result; 
+// }
+
+// console.log(filterLongWords(sentence, n));
+
+// ----------------------------------------------------------------
+// 66.
+// В этом ката вам нужно проверить предоставленный двумерный массив 
+// (x) на наличие хороших идей «хорошо» и плохих идей «плохо». Если 
+// есть одна или две хорошие идеи, верните «Опубликовать!», если 
+// их больше 2, верните «Чую серию!». Если нет хороших идей, как 
+// это часто бывает, верните «Fail!».
+// Подмассивы могут быть разной длины.
+// Решение должно быть нечувствительным к регистру (т. е. 
+//     «хорошо», «хорошо» и «хорошо» — все считается хорошей 
+//     идеей). Все входные данные не могут быть строками.
+
+// let x = [['bad', 'bAd', 'bad'], ['bad', 'bAd', 'bad'], ['bad', 'bAd', 'bad']];
+// function well(x) {
+//     let goodIdeas = 0;
+//     x = x.flat();
+//     for (let i = 0; i < x.length; i++) {
+//         if (String(x[i]).toLowerCase() === 'good') {
+//             goodIdeas += 1;
+//         }
+//     }
+//     if (goodIdeas > 2) {
+//         return 'I smell a series!';
+//     } else if (goodIdeas === 1 || goodIdeas === 2) {
+//         return 'Publish!';
+//     } else {
+//         return 'Fail!';
+//     }
+// }
+
+// console.log(well(x));
+
+// --------------------------------------------------------------
 
 
 
