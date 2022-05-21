@@ -1515,7 +1515,6 @@
 
 // --------------------------------------------------------------------
 // 62.
-//TODO дорешать!
 // Ваша задача — создать функцию, которая принимает значение слова и 
 // возвращает его с буквой «i» в начале слова. Например, мы получаем 
 // слово «Телефон», поэтому мы должны вернуть «iPhone». Но у нас 
@@ -1526,37 +1525,33 @@
     // Первая буква не должна быть строчной, например, road .
 // Если слово не соответствует правилам, возвращаем «Недопустимое слово».
 
-// let word = 'East East';
+// let word = 'Fridge';
 // function i(word) {
 //     let letter = 'i';
 //     let vowels = 'aeiou';
+//     let vowelsBig = 'AEIOU'
 //     let consonants = 'bcdfghjklmnpqrstvwxyz';
 //     let vowelsInWord = 0;
 //     let consonantsInWord = 0;
+//     if (word.charAt(0) === 'i' || word.charAt(0) === 'I') {
+//         return 'Invalid word';
+//     }
 //     for (let i = 0; i < word.length; i++)  {
-//         if (word[i][0] === 'i' || word[i][0] === 'I') {
-//             console.log(1)
+//         if (word.charAt(0) === word.charAt(0).toLowerCase()) {
 //             return 'Invalid word';
-//         } else if (word.charAt(0) === word.charAt(0).toLowerCase()) {
-//             console.log(word.charAt(0))
-//             return 'Invalid word';
-//         } else if (vowels.includes(word[i])) {
+//         } else if (vowels.includes(word[i]) || vowelsBig.includes(word[i])) {
 //             vowelsInWord ++;
 //         } else {
 //             consonantsInWord ++;
 //         }
 //     }
-//     if (vowelsInWord >= consonantsInWord) {
+//     if (vowelsInWord >= consonantsInWord || word.length === 0) {
 //         return 'Invalid word';
 //     } else {
 //         letter += word;
 //     }
-//     console.log(vowelsInWord)
-//     console.log(consonantsInWord)
-
 //     return letter;
 // }
-
 // console.log(i(word));
 
 // ------------------------------------------------------------------
@@ -1653,8 +1648,142 @@
 // console.log(well(x));
 
 // --------------------------------------------------------------
+// 67.
+// будет предоставлена ​​строка из четырех слов. Ваша задача перевести их на язык Гордона
+// слова должны быть прописными, каждое слово должно заканчиваться на «!!!!», любая буква 
+// «а» или «А» должна стать «@», любая другая гласная должна стать «*».
+
+// let a = 'are you stu pid';
+// function gordon(a) {
+//     let vowelLetters = 'aeiou';
+//     let result = ''; 
+//     for (let i = 0; i < a.length; i++) {
+//         if ((a[i].includes('a') && a[i + 1] === ' ') || (a[i].includes('A') && a[i + 1] === ' ')) {
+//             result += '@' + '!!!!';
+//         } else if (a[i].includes('a') || a[i].includes('A')) {
+//             result += '@';
+//         } else if (vowelLetters.includes(a[i]) &&  a[i + 1] === ' ') {
+//             result += '*' + '!!!!';
+//         } else if (vowelLetters.includes(a[i])) {
+//             result += '*';
+//         } else if (a[i + 1] === ' ') {
+//             result += a[i] + '!!!!';
+//         }  else {
+//             result += a[i];
+//         }
+//     }
+//     result += '!!!!';
+//     return result.toUpperCase();
+// }
+// console.log(gordon(a));
+
+// --------------------------------------------------------------
+// 68.
+// Учитывая строку, показывающую либо ровную 
+// дорогу ("_"), либо неровности ("n"), определите, благополучно 
+// ли вы доберетесь до дома. 15 ударов или меньше, ответьте 
+// "Woohoo!", более 15 ударов, ответьте "Car Dead".
+
+// let x ='_nnnnnnn_n__n______nn__nn_nnn';
+// function bump(x) {
+//     let smoothRoad = '_';
+//     let bumps = 'n';
+//     let smoothRoadCount = 0;
+//     let bumpsCount = 0; 
+//     for(let i = 0; i < x.length; i++) {
+//         if (x[i] === smoothRoad) {
+//             smoothRoadCount += 1;
+//         } else {
+//             bumpsCount +=1;
+//         }
+//     }
+//     if ((smoothRoadCount > bumpsCount && smoothRoadCount <= 15) || bumpsCount <= 15) {
+//         return 'Woohoo!';
+//     } else {
+//         return 'Car Dead';
+//     }
+// }
+// console.log(bump(x));
+
+// --------------------------------------------------------------
+// 69.
+// Дана последовательность чисел, найти наибольшую сумму пар в последовательности.
+// Входная последовательность содержит как минимум два элемента, и каждый 
+// элемент является целым числом.
+// Например: [99, 2, 2, 23, 19]  --> 122 (= 99 + 23)
+
+// let numbers = [10,14,2,23,19];
+// function largestPairSum(numbers) {
+//     let result = 0; 
+//     numbers = numbers.sort(function(a,b) { return b - a});
+//     result = +(numbers[0] +numbers[1]);
+//     return result;
+// }
+// console.log(largestPairSum (numbers));
+
+// --------------------------------------------------------------
+// 70.
+// предоставлена ​​строка, и ваша задача будет заключаться в том, 
+// чтобы вернуть список целых чисел, детализирующий количество 
+// прописных букв, строчных букв, цифр и специальных символов
+// Например: Solve("*'&ABCDabcde12345") = [4,5,5,3]. 
+
+// function solve(s) {
+//     let result = [];
+//     let uppercaseLetters = s.match(/[A-Z]/g);
+//     let lowercaseLetters = s.match(/[a-z]/g);
+//     let numbers = s.match(/[0-9]/g);
+//     let uppercaseLettersCount = uppercaseLetters.length;
+//     result.push(uppercaseLettersCount);
+//     let lowercaseLettersCount = lowercaseLetters.length;
+//     result.push(lowercaseLettersCount);
+//     let numbersCount = numbers.length;
+//     result.push(numbersCount);
+//     let specialCharacters = s.length - (uppercaseLettersCount + lowercaseLettersCount + numbersCount);
+//     result.push(specialCharacters);
+//     return result;
+// }
+// console.log(solve(s));
 
 
+// --------------------------------------------------------------
+// 71.
+// Учитывая массив (x), вам нужно рассчитать оценку Пола Мизери. 
+// Значения приносят следующие баллы:
+// kata = 5
+// Petes kata = 10
+// life = 0
+// eating = 1
+
+// let x = ['life', 'eating', 'life'];
+// function paul(x){
+//     let eating = 'eating';
+//     let petesKata = 'Petes kata';
+//     let kata = 'kata';
+//     let sum = 0;
+//     for (let i = 0; i < x.length; i++) {
+//         if (kata.includes(x[i])) {
+//             sum += 5;
+//         } else if (petesKata.includes(x[i])) {
+//             sum += 10;
+//         } else if (eating.includes(x[i])) {
+//             sum += 1;
+//         }
+//     }
+
+//     if (sum < 40) {
+//         return 'Super happy!';
+//     } else if (sum < 70 && sum >= 40) {
+//         return 'Happy!';
+//     } else if (sum < 100 && sum >= 70) {
+//         return 'Sad!';
+//     } else {
+//         return 'Miserable!';
+//     }
+// }
+// console.log(paul(x));
+
+// --------------------------------------------------------------
 
 
 
